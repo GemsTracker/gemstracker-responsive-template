@@ -1,0 +1,158 @@
+table tbody td.selectedColumn, table tfoot td.selectedColumn, table thead th.selectedColumn {
+    border-left: 2px solid lightgrey;
+    border-right: 2px solid lightgrey;
+}
+
+table tfoot td.selectedColumn, table tr.selectedRow td.selectedColumn, table.timeTable thead th.selectedColumn, table.timeTable td[onclick]:hover, table.timeTable th[onclick]:hover {
+    border-color: lightgrey;
+    background-color: lightgrey;
+}
+
+.sortAsc,
+.sortAscSelected,
+.sortDescSelected {
+  line-height: 1.3em;
+  padding-bottom: 7px;
+  position: relative;
+}
+.sortAsc:hover,
+.sortAscSelected,
+.sortDescSelected:hover {
+  &:before {
+    .fa();
+    content: "\f0d8";
+    color: rgb(78,160,223);
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+  }
+}
+a.sortAscSelected:hover,
+a.sortDescSelected {
+  &:before {
+    .fa();
+    content: "\f0d7";
+    color: rgb(78,160,223);
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+  }
+}
+
+table {
+    &.browser.table {
+        // Default bootstrap classes
+        .table-bordered;
+        .table-hover;
+        .table-condensed;
+
+        & > tbody > tr:nth-child(odd) > td {
+            background-color: @table-background-color-odd;
+            color: @table-text-color-odd;
+        }
+        & > tbody > tr:nth-child(even) > td {
+            background-color: @table-background-color-even;
+            color: @table-text-color-even;
+        }
+        & > tbody > tr:hover > td,
+        & > tbody > tr:hover > th {
+          background-color: @table-background-color-hover;
+          color: @table-text-color-hover;
+        }
+        th {
+            color: @table-head-text-color;
+            background: @table-head-background-color;
+            border-bottom: none;
+            a {
+                color: @table-header-link-color;
+            }
+        }
+        tbody {
+            td {
+                color: @table-text-color;
+            }
+        }
+
+        > thead > tr > th {
+            border-bottom: none;
+        }
+    }
+
+    tr[onclick]:hover,
+    td[onclick]:hover,
+    th[onclick]:hover {
+        cursor: pointer;
+    }
+
+    .question {
+        text-indent: -1em;
+        padding-left: 1em;
+    }
+
+    .question_sub {
+        padding-left: 1em;
+    }
+
+    tfoot td.selectedColumn, tfoot th.selectedColumn {
+        border-bottom: 2px solid;
+    }
+
+    td.date, td.token {
+        white-space: pre;
+        /* width: 7em; */
+    }
+
+    td.timeResult, th.timeResult {
+        width: 5em;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    tr.selectedRow td.selectedColumn {
+        border-bottom: 2px solid;
+        font-weight: bold;
+    }
+
+    tr.selectedRow td.selectedColumn, thead th.selectedColumn {
+        border-top: 2px solid;
+    }
+
+    &.timeTable th a {
+        color: inherit;
+    }
+
+    &.timeTable td a, &.timeTable td a:hover {
+        color: inherit;
+    }
+
+    .currentRow {
+        background-color: aqua;
+        border: 3px solid darkblue !important;
+    }
+
+    td.fileAction {
+        text-align: right;
+        width: 100px;
+    }
+
+    td.rightAlign, th.rightAlign {
+        padding-right: 0.5em;
+    }
+
+    td.tracksList {
+        width: 25%;
+    }
+
+    td .tracksList {
+        height: 10em;
+        overflow: auto;
+    }
+}
+
+.table-container {
+    .table-responsive;
+}

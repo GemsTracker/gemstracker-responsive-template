@@ -1,0 +1,123 @@
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#container {
+   min-height:100%;
+   position:relative;
+}
+
+#main-container {
+    margin-bottom: @footer-height;
+    &.include-menu {
+        float: right;
+        width: 100%;
+        margin-left: -@menu-width;
+        #main {
+            padding-top: 2em;
+            margin-left: @menu-width;
+        }
+    }
+}
+
+header {
+
+    .row();
+
+    .logo {
+        width: 300px;
+        height: 80px;
+        float: left;
+        background: url(../images/logo.png) no-repeat;
+    }
+    .description {
+        float: left;
+        width: 300px;
+    }
+
+    .tools {
+        float: right;
+    }
+
+    .login-status {
+        display: inline-block;
+        border-right: @gray-light2 1px solid;
+        padding: 10px 10px 0px 10px;
+        vertical-align: top;
+        .logout {
+            margin-left: 1em;
+        }
+    }
+    .language-select {
+        padding: 10px 10px 0px 10px;
+        display: inline-block;
+    }
+}
+
+body {
+    background-color: @body-background-color;
+    color: @text-color;
+}
+
+.tab-pane {
+    padding: 15px;
+}
+
+.login-form {
+    .make-sm-column(4);
+}
+
+footer {
+    .row();
+    position:absolute;
+    z-index: 10;
+    bottom:0;
+    width:100%;
+    height: @footer-height;   /* Height of the footer */
+    background: @footer-background-color;// url('../images/dots-footer-background.png') no-repeat -335px -175px;
+    color: @footer-text-color;
+    a {
+        margin: 1em;
+        color: @footer-text-color;
+        text-decoration: underline;
+    }
+    overflow: hidden;
+    #version {
+        padding: 1em;
+        .make-sm-column(6);
+    }
+
+    #username {
+        .make-sm-column(6);
+        .text-right;
+    }
+}
+
+.ui-progressbar {
+    
+  .progress;
+  .ui-progressbar-value {
+    background: none;
+    .progress-bar;
+    .progress-bar-success;
+    margin: 0;
+  }
+  .ui-progressbar-text {
+    padding: 0;
+  }
+}
+
+@media (max-width: @grid-float-breakpoint) {
+    #main-container.include-menu {
+        margin-left: 0;
+        #main {
+            margin-left: 0;
+        }
+    }
+
+    #menu {
+        display: none;
+    }
+}

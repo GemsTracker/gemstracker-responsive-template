@@ -1,0 +1,135 @@
+.btn {
+    // Default size
+    .btn-sm;
+    //.button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
+
+    border-radius: @btn-border-radius-base;
+    border-width: @btn-border-size;
+    padding: @btn-border-padding-vertical @btn-border-padding-horizontal;
+    box-shadow: @btn-box-shadow;
+
+    .icon {
+        float: right;
+        padding-right: 4px;
+    }
+    
+    color: @btn-text-color;
+    background-color: @btn-background-color;
+    border-color: @btn-border-color;
+
+    // Reevaluate custom overwrites of the default value
+    &.btn-default {
+      .btn-default;
+    }
+    &.btn-primary {
+      .btn-primary;
+    }
+    // Success appears as green
+    &.btn-success {
+      .btn-success;
+    }
+    // Info appears as blue-green
+    &.btn-info {
+      .btn-info;
+    }
+    // Warning appears as orange
+    &.btn-warning {
+      .btn-warning;
+    }
+    // Danger and error appear as red
+    &.btn-danger {
+      .btn-danger;
+    }
+
+    &.btn-lg {
+      // line-height: ensure even-numbered height of button next to large input
+      .btn-lg;
+    }
+    &.btn-sm {
+      // line-height: ensure proper height of button next to small input
+      .btn-sm;
+    }
+    &.btn-xs {
+      .btn-xs;  
+    }
+
+    &.disabled {
+        color: @btn-disabled-text-color;
+        background-color: @btn-disabled-background-color;
+        border-color: @btn-disabled-border-color;
+    }
+
+
+    &:hover,
+    &:focus,
+    &:active,
+    &.active {
+        color: @btn-hover-text-color;
+        background-color: @btn-hover-background-color;
+        border-color: @btn-hover-border-color;
+    }
+}
+
+.buttons .btn, .button .btn {
+    margin-left: 10px;
+}
+
+span.actionlink {
+    font-style: italic;
+}
+
+.toolbox {
+    margin-bottom: .5em;    
+    &.btn-group {
+        margin-left: 10px;
+        .toolanchor {
+            .btn;
+            width: 14em;
+            margin-right: 0px;
+        }
+        .dropdown-toggle {
+            .btn;
+            width: 2em;
+            margin-right: 0px;
+        }
+        ul {
+            li {
+                width: 16.5em;
+                .add {
+                    width: 14.5em;
+                    overflow: hidden;
+                }
+                .info {
+                    position: absolute;
+                    right: 0;
+                    width: 2em;
+                }
+
+                .scroll-menu {
+                    position: relative;
+                    display: inherit !important;
+                    -webkit-overflow-scrolling: touch;
+                    -moz-overflow-scrolling: touch;
+                    -ms-overflow-scrolling: touch;
+                    -o-overflow-scrolling: touch;
+                    overflow-scrolling: touch;
+                    top: 0 !important;
+                    left: 0 !important;
+                    width: 100%;
+                    height: 15em;
+                    margin: 0;
+                    border-left: none;
+                    border-right: none;
+                    border-radius: 0;
+                    .box-shadow(none);
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+
+                    li .add {
+                        width: 13.5em;
+                    }
+                }
+            }
+        }
+    }
+}

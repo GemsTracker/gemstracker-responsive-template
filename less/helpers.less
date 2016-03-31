@@ -1,0 +1,146 @@
+.print-only {
+    display: none;
+}
+
+.disabled {
+    font-style: italic;
+}
+
+.leftFloat {
+    float: left;
+    margin-right: 0.4em;
+}
+
+.rightFloat {
+    float: right;
+    margin-left: 0.4em;
+}
+
+.rightAlign {
+    text-align: right;
+}
+
+.centerAlign {
+    text-align: center;
+}
+
+.middleAlign {
+    vertical-align: middle;
+}
+
+.larger {
+    font-size: 120% !important;
+}
+
+.smallTime {
+    font-size: 80%;
+    font-style: italic;
+}
+
+p {
+    &.description {
+        display: inline;
+        font-size: 0.75em;
+        padding: 2px 6px;
+    }
+    &.info {
+        margin: 0.75em 0;
+    }
+}
+
+.indent {
+    margin-left: 4em;
+    margin-right: 4em;
+}
+
+.indentLeft {
+    padding-left: 3em;
+}
+
+.periodSlider {
+    margin: 0.5em;
+}
+
+.pre {
+    white-space: pre-wrap;
+}
+
+
+.separator {
+    color: grey;
+    font-weight: normal;
+}
+
+.surveyTitle {
+    font-weight: bold;
+}
+
+.zend_echo {
+    color: #DD0000;
+    font-weight: bold;
+    background: #FAF8CC;
+    margin: 2px;
+    padding: 0.25em 0.5em;
+    border: 1px solid;
+}
+
+.logFile {
+    border: 2px solid #888888;
+    /* border-right: 0px transparent; */
+    padding: 1px 0 1px 3px;
+    height: 500px;
+    overflow: auto;
+    width: 99%;
+}
+
+.mailpreview {
+    background-color: #FEFEFE;
+    border: 3px groove #888888;
+    margin: 2px 1px;
+    padding: 2px 0.5em;
+}
+pre.mailpreview {white-space: pre-wrap;}
+
+.tracksList p {
+    margin-bottom: 0.25em;
+}
+
+textarea + p.description {
+    display: block;
+}
+
+.tooltip {
+    background: #FFFFCC;
+    border: 1px solid #e8f5fd;
+    padding: 3px 5px;
+    color: black;
+    font-size: .8em;
+}
+
+.deleted {
+    color: #888888;
+    font-style: italic;
+    text-decoration: line-through; /* Bug in Firefox: line-through remains on for descending inline elements */
+}
+
+.askRound {
+    margin-left: 2em;
+}
+
+.askSurvey {
+    margin: 0.1em 0 0.1em 4em;
+}
+
+.askTrack {
+    margin-top: 0.8em;
+}
+
+#autofilter_target {
+    clear: both;
+}
+
+.open > .dropdown-toggle.btn-primary {
+  color: @btn-hover-text-color;
+  background-color: @btn-hover-background-color;
+  border-color: @btn-hover-border-color;
+}

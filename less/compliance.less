@@ -1,0 +1,136 @@
+.compliance {
+    .rounds {
+        overflow: hidden;
+        white-space: pre;
+    }
+
+    .rounds th {
+        border-top: transparent none;
+    }
+    
+    td.answered { 
+        a, span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background: rgb(91,198,53);
+            border: @gray 1px solid;
+            
+            &:before {
+                .fa();
+                content: "\f00c";
+                color: white;
+                font-size: 11px;
+                position: absolute;
+                left: 1px;
+                top: 2px;
+            }
+        }
+    }
+
+    td.missed {
+        a, span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background: rgb(207,56,55);
+            border: @gray 1px solid;
+        }
+    }
+
+    td.newRound, th.newRound {
+        border-left-width: 3px;
+    }
+
+    td.open {
+        a, span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background: rgb(57,150,220);
+            border: @gray 1px solid;
+            
+            &:before {
+                .fa();
+                content: "\f062";
+                color: white;
+                font-size: 11px;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+            }
+        }
+    }
+
+    td.round, td.round a {
+        color: transparent;
+    }
+
+    td.round, th.round {
+        overflow: hidden;
+        text-align: center;
+        width: 24px;
+        vertical-align: middle;
+        a, span {
+            position: relative;
+            vertical-align: middle;
+        }
+    }
+
+    td.unknown {
+        a, span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background: rgb(153,204,255);
+            border: @gray 1px solid;
+            &:before {
+                .fa();
+                content: "\f128";
+                color: white;
+                font-size: 11px;
+                position: absolute;
+                left: 4px;
+                top: 2px;
+            }
+        }
+    }
+
+    td.waiting {
+        a, span {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            background: rgb(57,150,220);
+            border: @gray 1px solid;
+            &:before {
+                .fa();
+                content: "\f017";
+                color: white;
+                font-size: 11px;
+                position: absolute;
+                left: 2px;
+                top: 2px;
+            }
+        }
+    }
+
+    td.empty {
+        a, span {
+            &:before {
+                .fa();
+                position: absolute;
+                content: "\f00d";
+                color: rgb(207,56,55);
+                font-size: 26px;
+                left: -5px;
+                top: -3px;
+            }
+        }
+    }
+}

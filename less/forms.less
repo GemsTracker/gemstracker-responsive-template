@@ -1,0 +1,113 @@
+/* forms */
+input {
+    &.disabled {
+        color: #737373;
+        font-style: italic;
+    }
+    &[disabled] {
+        color: black;
+        background: @input-bg-disabled;
+        font-style: italic;
+    }
+    &[readonly] {
+        background: @input-bg-disabled;
+    }
+    &.token_copy {
+        .form-control;
+        width: auto;
+        background-color: @input-bg-disabled;
+        opacity: 1;
+    }
+}
+
+/* Tab forms */
+form div.tab-pane {
+    border: 1px solid #ddd;
+    padding-top: 2em;
+    border-top: none;
+}
+
+/* for datepickers */
+.form-horizontal {
+    .form-group {
+        .input-group label { float:none;}
+    }
+}
+
+label.required::after {
+    content: " *";
+    color: red;
+}
+
+/* fix for checkboxes without label wrapped around it */
+.checkbox-extlabel input[type=checkbox] {
+    margin-left: 0px;
+}
+.checkbox-extlabel .help-block {
+    margin-top: 20px;
+}
+
+.taberror a, .taberror a span {
+    color: #DD0000;
+}
+
+.form-horizontal {
+  .form-group {
+    margin-bottom: 0;
+    padding: 3px 0;
+    
+
+    &:nth-child(odd) {
+      background-color: @form-row-background-color-odd;
+    }
+    &:nth-child(even) {
+      background-color: @form-row-background-color-even;
+    }
+
+    label, .label-container {
+        .make-sm-column(2);
+    }
+    .element-container {
+        .make-sm-column(10);
+        
+        label {
+            width: auto;
+            float: none;
+            
+            input[type="checkbox"] { 
+                margin-right: .5em; 
+            }
+        }
+
+        .input-group-addon {
+            display: table-cell;
+
+        }
+
+    }
+    .element-container-labelless {
+        .make-sm-column(10);
+        .make-sm-column-offset(2);
+    }
+    
+    label {
+      display: inline-block;
+      text-align: right;
+    }
+
+    .form-control {
+        width: auto;
+        display: inline-block;
+    }
+
+
+
+    .element-container {
+      width: auto;
+    }
+
+    .help-block {
+      display: inline-block;
+    }
+  }
+}

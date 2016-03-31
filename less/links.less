@@ -1,0 +1,45 @@
+a {
+    color: @link-color;
+    &:hover {
+        color: @link-hover-color;
+    }
+
+    /*If font awesome is enabled */
+    &[href^="mailto:"]::after {
+        content: " \f003";
+        color: black;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 1.2em;
+    }
+    /*&[href^="mailto:"] {
+        background: transparent url(../gems/images/mail.png) no-repeat scroll right center;
+        padding-right: 20px;
+    }*/
+
+    /*If font awesome is enabled */
+    &.globe::after {
+        content: " \f0ac";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 1.2em;
+    }
+    /*&.globe {
+        background: transparent url(../gems/images/globe.png) no-repeat scroll right center;
+        padding-right: 20px;
+    }*/
+
+    /*If font awesome is enabled */
+    &.pdf::after {
+        content: " \f1c1";
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: 1.2em;
+        color: red;    
+    }
+    /*&.pdf {
+        background: transparent url(../gems/images/pdf_small.gif) no-repeat scroll right center;
+        padding-right: 20px !important;
+    }*/
+
+    img.file-icon {
+      margin-left: 4px;
+    }
+}
