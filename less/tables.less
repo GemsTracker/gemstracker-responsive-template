@@ -41,37 +41,48 @@ a.sortDescSelected {
   }
 }
 
+.table-container {
+    .table-responsive;
+}
+
 table {
-    &.browser.table {
+    &.browser {
+        .table;
         // Default bootstrap classes
         .table-bordered;
         .table-hover;
         .table-condensed;
 
-        & > tbody > tr:nth-child(odd) > td {
-            background-color: @table-background-color-odd;
-            color: @table-text-color-odd;
+        > tbody {
+            > tr {
+                &:nth-child(odd) > td {
+                    background-color: @table-background-color-odd;
+                    color: @table-text-color-odd;
+                }
+                &:nth-child(even) > td {
+                    background-color: @table-background-color-even;
+                    color: @table-text-color-even;
+                }
+                &:hover > td,
+                &:hover > th {
+                    background-color: @table-background-color-hover;
+                    color: @table-text-color-hover;
+                }
+                > td {
+                    color: @table-text-color;
+                    &.question_sub {
+                        padding-left: 1.5em;
+                    }
+                }
+            }
         }
-        & > tbody > tr:nth-child(even) > td {
-            background-color: @table-background-color-even;
-            color: @table-text-color-even;
-        }
-        & > tbody > tr:hover > td,
-        & > tbody > tr:hover > th {
-          background-color: @table-background-color-hover;
-          color: @table-text-color-hover;
-        }
-        th {
+
+        > thead tr > th {
             color: @table-head-text-color;
             background: @table-head-background-color;
             border-bottom: none;
             a {
                 color: @table-header-link-color;
-            }
-        }
-        tbody {
-            td {
-                color: @table-text-color;
             }
         }
 
@@ -84,15 +95,6 @@ table {
     td[onclick]:hover,
     th[onclick]:hover {
         cursor: pointer;
-    }
-
-    .question {
-        text-indent: -1em;
-        padding-left: 1em;
-    }
-
-    .question_sub {
-        padding-left: 1em;
     }
 
     tfoot td.selectedColumn, tfoot th.selectedColumn {
@@ -151,8 +153,4 @@ table {
         height: 10em;
         overflow: auto;
     }
-}
-
-.table-container {
-    .table-responsive;
 }
