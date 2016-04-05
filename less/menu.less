@@ -46,6 +46,7 @@
                 font-weight: bold;
                 &:hover {
                     background-color: @menu-hover-background-color;
+                    background-color: @menu-hover-link-color;
                     text-decoration: underline;
                 }
             }
@@ -88,7 +89,8 @@ header {
                     font-size: 16px;
                     padding: 13px 20px;
                     &:hover {
-                        background-color: transparent;
+                        background-color: @header-menu-hover-background-color;
+                        color: @header-menu-hover-link-color;
                         text-decoration: underline;
                     }
                     &:active, &:focus {
