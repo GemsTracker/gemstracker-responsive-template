@@ -153,10 +153,10 @@ header {
         z-index: 1000;
         top: 7px;
         left: 9px;
-        color: white;
+        color: @header-menu-link-color;
         cursor: pointer;
         &:hover {
-            color: black;
+            color: @header-menu-hover-link-color;
         }
     }
 }
@@ -193,6 +193,7 @@ header {
             top: 0;
             left: 0;
             margin-top: 0;
+            height: 40px;
             .navigation {
                 display: none;
             }
