@@ -28,14 +28,14 @@ header {
     .row();
 
     .logo {
-        width: 300px;
+        width: @logo-width;
         height: 80px;
         float: left;
-        background: url(../images/logo.png) no-repeat;
+        background: url(../images/logo.png) @logo-offset-x @logo-offset-y no-repeat;
     }
     .description {
         float: left;
-        width: 300px;
+        /* width: 300px; */
     }
 
     .tools {
