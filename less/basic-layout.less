@@ -9,9 +9,15 @@ body {
    position:relative;
 }
 
-#main-container {
+#container > .content {
+    display: table;
+    width: 100%;
     margin-bottom: @footer-height;
     padding-bottom: 20px;
+}
+
+#main-container {
+    display: table-cell;
     &.include-menu {
         float: right;
         width: 100%;
