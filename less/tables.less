@@ -74,6 +74,22 @@ table {
                         padding-left: 1.5em;
                     }
                 }
+
+                &.active > td, &.active > th, > td.active, > th.active {
+                    background-color: @table-bg-active;
+                }
+                &.success > td, &.success > th, > td.succes, > th.success {
+                    background-color: @state-success-bg;
+                }
+                &.info > td, &.info > th, > td.info, > th.info {
+                    background-color: @state-info-bg;
+                }
+                &.warning > td, &.warning > th, > td.warnin, > th.warning {
+                    background-color: @state-warning-bg;
+                }
+                &.danger > td, &.danger > th, > td.danger, > th.danger {
+                    background-color: @state-danger-bg;
+                }
             }
         }
 
