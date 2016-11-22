@@ -1,13 +1,5 @@
 /* tables */
-table tbody td.selectedColumn, table tfoot td.selectedColumn, table thead th.selectedColumn {
-    border-left: 2px solid lightgrey;
-    border-right: 2px solid lightgrey;
-}
 
-table tfoot td.selectedColumn, table tr.selectedRow td.selectedColumn, table.timeTable thead th.selectedColumn, table.timeTable td[onclick]:hover, table.timeTable th[onclick]:hover {
-    border-color: lightgrey;
-    background-color: lightgrey;
-}
 
 .sortAsc,
 .sortAscSelected,
@@ -95,7 +87,7 @@ table {
             }
         }
 
-        thead tr th {
+        thead tr th, tfoot tr th {
             color: @table-head-text-color;
             background: @table-head-background-color;
             border-bottom: none;
@@ -111,6 +103,25 @@ table {
             .table;
             width: 100%;
             .table-striped;
+        }
+
+        tbody, tfoot, thead {
+            td.selectedColumn, th.selectedColumn {
+                border-left: 2px solid @table-selected-column-color;
+                border-right: 2px solid @table-selected-column-color;
+            }
+
+            th.selectedColumn {
+                background-color: @table-selected-column-color;
+            }
+        }
+
+        thead:first-child tr:first-child th.selectedColumn {
+            border-top: 2px solid @table-selected-column-color;
+        }
+
+        tfoot th.selectedColumn {
+            border-bottom: 2px solid @table-selected-column-color;
         }
     }
 
@@ -179,5 +190,28 @@ table {
     td .tracksList {
         height: 10em;
         overflow: auto;
+    }
+}
+
+table.timeTable {
+    tbody, tfoot, thead {
+        td.selectedColumn, th.selectedColumn {
+            border-left: 2px solid @table-selected-column-color;
+            border-right: 2px solid @table-selected-column-color;
+        }
+
+        th.selectedColumn {
+            background-color: @table-selected-column-color;
+        }
+    }
+
+    thead:first-child tr:first-child th.selectedColumn {
+        border-top: 2px solid @table-selected-column-color;
+        border-bottom: 2px solid @table-selected-column-color;
+    }
+
+    tfoot td.selectedColumn {
+        background-color: @table-selected-column-color;
+        border-bottom: 2px solid @table-selected-column-color;
     }
 }
