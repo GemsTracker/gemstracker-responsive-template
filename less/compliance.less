@@ -8,61 +8,55 @@
     .rounds th {
         border-top: transparent none;
     }
-    
-    td.answered { 
-        a, span {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 8px;
-            background: rgb(91,198,53);
-            border: @gray 1px solid;
-            
-            &:before {
-                .fa();
-                content: "\f00c";
-                color: white;
-                font-size: 11px;
-                position: absolute;
-                left: 1px;
-                top: 2px;
-            }
-        }
-    }
 
-    td.missed {
-        a, span {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 8px;
-            background: rgb(207,56,55);
-            border: @gray 1px solid;
-        }
-    }
-
-    td.newRound, th.newRound {
-        border-left-width: 3px;
-    }
-
-    td.open {
-        a, span {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 8px;
+    td.round, td.table-button.open, td.table-button.answered, td.table-button.missed, td.table-button.unkown, td.table-button.waiting, td.table-button.empty {
+        position: relative;
+        a:before, span:before {
+            .fa();
             background: rgb(57,150,220);
+            content: " ";
+            color: white;
+            font-size: 11px;
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
             border: @gray 1px solid;
-            
-            &:before {
-                .fa();
-                content: "\f062";
-                color: white;
-                font-size: 11px;
-                position: absolute;
-                left: 2px;
-                top: 2px;
-            }
+            line-height: 14px;
+        }
+    }
+
+    td.round, td.table-button {
+        &.answered a:before, &.answered span:before {
+            background: rgb(91,198,53);
+            content: "\f00c";
+        }
+        &.missed a:before, &.missed span:before {
+            background: rgb(207,56,55);
+        }
+        &.open a:before, &.open span:before {
+            background: rgb(57,150,220);
+            content: "\f062";
+        }
+        &.unknown a:before, &.unknown span:before {
+            background: rgb(153,204,255);
+            content: "\f128";
+        }
+        &.waiting a:before, &.waiting span:before {
+            background: rgb(57,150,220);
+            content: "\f017";
+        }
+        &.empty a:before, &.empty span:before {
+            content: "\f00d";
+            font-size: 18px;
+            background: white;
+            color: rgb(207,56,55);
+        }
+    }
+
+    td.table-button {
+        &.answered a:before, &.missed a:before, &.open a:before, &.unknown a:before, &.waiting a:before, &.empty a:before {
+            top: 40px;
         }
     }
 
@@ -81,57 +75,7 @@
         }
     }
 
-    td.unknown {
-        a, span {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 8px;
-            background: rgb(153,204,255);
-            border: @gray 1px solid;
-            &:before {
-                .fa();
-                content: "\f128";
-                color: white;
-                font-size: 11px;
-                position: absolute;
-                left: 4px;
-                top: 2px;
-            }
-        }
-    }
-
-    td.waiting {
-        a, span {
-            display: inline-block;
-            width: 16px;
-            height: 16px;
-            border-radius: 8px;
-            background: rgb(57,150,220);
-            border: @gray 1px solid;
-            &:before {
-                .fa();
-                content: "\f017";
-                color: white;
-                font-size: 11px;
-                position: absolute;
-                left: 2px;
-                top: 2px;
-            }
-        }
-    }
-
-    td.empty {
-        a, span {
-            &:before {
-                .fa();
-                position: absolute;
-                content: "\f00d";
-                color: rgb(207,56,55);
-                font-size: 26px;
-                left: -5px;
-                top: -3px;
-            }
-        }
+    td.newRound, th.newRound {
+        border-left-width: 3px;
     }
 }
