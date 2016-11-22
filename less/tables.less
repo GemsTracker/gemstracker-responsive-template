@@ -46,6 +46,8 @@ a.sortDescSelected {
     .table-responsive;
 }
 
+@table-bg-accent: @table-background-color-even;
+
 table {
     &.browser {
         .table;
@@ -53,16 +55,15 @@ table {
         .table-bordered;
         .table-hover;
         .table-condensed;
+        .table-striped;
 
         > tbody {
             > tr {
                 &:nth-child(odd) > td {
-                    background-color: @table-background-color-odd;
-                    color: @table-text-color-odd;
+                    color: @table-text-color-even;
                 }
                 &:nth-child(even) > td {
-                    background-color: @table-background-color-even;
-                    color: @table-text-color-even;
+                    color: @table-text-color-odd;
                 }
                 &:hover > td,
                 &:hover > th {
@@ -94,7 +95,7 @@ table {
             }
         }
 
-        > thead tr > th {
+        thead tr th {
             color: @table-head-text-color;
             background: @table-head-background-color;
             border-bottom: none;
@@ -105,6 +106,11 @@ table {
 
         > thead > tr > th {
             border-bottom: none;
+        }
+        table {
+            .table;
+            width: 100%;
+            .table-striped;
         }
     }
 
