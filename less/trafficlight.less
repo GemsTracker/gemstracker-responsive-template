@@ -7,7 +7,7 @@
 // @brand-info;
 // @brand-success;
 // @brand-warning;
-// @brand-danger; 
+// @brand-danger;
 // @font-size-h3;
 // @headings-color;
 
@@ -56,8 +56,8 @@
 
 
 div.loading {
-    /*background: url('../local/ajax-loader.gif'); */
-    background-position: center;    
+    background: url("@{image-dir}/ajax-loader.gif");
+    background-position: center;
     width: 10em;
     height: 10em;
     background-repeat: no-repeat;
@@ -77,7 +77,7 @@ div.loading {
         }
 
         .progress-bar-success {
-            background-color: @brand-success;            
+            background-color: @brand-success;
         }
         .progress-bar-warning {
             background-color: @brand-warning;
@@ -92,7 +92,7 @@ div.loading {
     }
 
     .panel-heading {
-        padding: 15px 10px;		
+        padding: 15px 10px;
 
         .title {
             .cursor-hand();
@@ -125,14 +125,14 @@ div.loading {
         overflow: hidden;
         overflow-x: scroll;
     }
-    
+
     .objecten {
         margin: 0 10px;
         padding: 0 10px;
         min-width:200%;
         width: 15000px;
     }
-    
+
     .object {
         h4, h5 {
             margin-top: 5px;
@@ -259,13 +259,13 @@ div.loading {
                 }
             }
         }
-    }    
+    }
 }
 
 .modal-dialog {
     /*width: 600px;*/
     width: 90%;
-    .modal-body { 
+    .modal-body {
         overflow: auto;
     }
 }

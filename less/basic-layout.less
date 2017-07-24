@@ -36,9 +36,9 @@ header {
 
     .logo {
         width: @logo-width;
-        height: 80px;
+        height: @logo-height;
         float: left;
-        background: url(../images/logo.png) @logo-offset-x @logo-offset-y no-repeat;
+        background: @logo-file @logo-offset-x @logo-offset-y no-repeat;
     }
     .description {
         float: left;
@@ -104,7 +104,7 @@ footer {
 }
 
 .ui-progressbar {
-    
+
   .progress;
   .ui-progressbar-value {
     background: none;
