@@ -9,20 +9,21 @@
         border-top: transparent none;
     }
 
-    td.round, td.table-button.open, td.table-button.answered, td.table-button.missed, td.table-button.unkown, td.table-button.waiting, td.table-button.empty {
+    td.round, td.table-button.open, td.table-button.answered, td.table-button.missed, td.table-button.unknown, td.table-button.waiting, td.table-button.empty {
         position: relative;
         a:before, span:before {
             .fa();
             background: rgb(57,150,220);
+            border-radius: 8px;
+            border: @gray 1px solid;
             content: " ";
             color: white;
             font-size: 11px;
-            position: absolute;
-            width: 16px;
             height: 16px;
-            border-radius: 8px;
-            border: @gray 1px solid;
             line-height: 14px;
+            position: absolute;
+            text-align: center;
+            width: 16px;
         }
     }
 
@@ -67,7 +68,7 @@
 
     td.round, th.round {
         overflow: hidden;
-        text-align: center;
+        text-align: left;
         width: 24px;
         vertical-align: middle;
         a, span {
