@@ -12,6 +12,7 @@ body {
 
 #container > .content {
     display: table;
+    table-layout: fixed;
     width: 100%;
     margin-bottom: @footer-height;
     padding-bottom: 20px;
@@ -79,10 +80,10 @@ body {
 
 footer {
     .row();
-    /*position:absolute;
+    position:absolute;
     z-index: 10;
     bottom:0;
-    width:100%;*/
+    width:100%;
     height: @footer-height;   /* Height of the footer */
     background: @footer-background-color;// url('../images/dots-footer-background.png') no-repeat -335px -175px;
     color: @footer-text-color;
