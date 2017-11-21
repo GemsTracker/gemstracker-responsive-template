@@ -1,83 +1,36 @@
 /* compliance */
-.compliance {
+table.browser.compliance {
+    tbody > tr > td {
+        vertical-align: middle;
+    }
+
     .rounds {
         overflow: hidden;
         white-space: pre;
     }
-
-    .rounds th {
-        border-top: transparent none;
-    }
-
-    td.round, td.table-button.open, td.table-button.answered, td.table-button.missed, td.table-button.unknown, td.table-button.waiting, td.table-button.empty {
-        position: relative;
-        a:before, span:before {
-            .fa();
-            background: rgb(57,150,220);
-            border-radius: 8px;
-            border: @gray 1px solid;
-            content: " ";
-            color: white;
-            font-size: 11px;
-            height: 16px;
-            line-height: 14px;
-            position: absolute;
-            text-align: center;
-            width: 16px;
+    
+    td {
+        span.fa-stack {
+            font-size: .7em;
         }
-    }
-
-    td.round, td.table-button {
-        &.answered a:before, &.answered span:before {
-            background: rgb(91,198,53);
-            content: "\f00c";
-        }
-        &.missed a:before, &.missed span:before {
-            background: rgb(207,56,55);
-        }
-        &.open a:before, &.open span:before {
-            background: rgb(57,56,220);
-            content: "\f062";
-        }
-        &.unknown a:before, &.unknown span:before {
-            background: rgb(153,204,255);
-            border: rgb(57,150,220) 1px dotted;
-            content: "\f128";
-        }
-        &.waiting a:before, &.waiting span:before {
-            background: rgb(57,150,220);
-            content: "\f017";
-        }
-        &.empty a:before, &.empty span:before {
-            content: "\f00d";
-            font-size: 18px;
-            background: white;
-            color: rgb(207,56,55);
-        }
-    }
-
-    td.table-button {
-        &.answered a:before, &.missed a:before, &.open a:before, &.unknown a:before, &.waiting a:before, &.empty a:before {
-            top: 40px;
-        }
-    }
-
-    td.round, td.round a {
-        color: transparent;
-    }
-
-    td.round, th.round {
-        overflow: hidden;
-        text-align: left;
-        width: 24px;
-        vertical-align: middle;
-        a, span {
-            position: relative;
-            vertical-align: middle;
-        }
+        a { color: inherit; }
+        &.answered { color: @brand-success !important;}
+        &.missed { color: @brand-danger !important;}
+        &.open { color: @brand-warning !important;}
+        &.unknown { color: @brand-info;}
+        &.waiting { color: darken(@brand-info, 20%) !important;}
+        &.empty { color: @brand-danger !important;}
     }
 
     td.newRound, th.newRound {
         border-left-width: 3px;
+    }
+
+    td.round, th.round {
+        text-align: center;
+        width: 2em; 
+        max-width: 2em;
+        overflow: hidden;
+        min-width: 2em;
     }
 }
