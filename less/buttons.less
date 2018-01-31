@@ -92,13 +92,19 @@ span.actionlink {
         margin-left: 10px;
         .toolanchor {
             .btn;
-            width: 14em;
+            /* width: 14em; */
             margin-right: 0px;
+            &.disabled {
+                box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.45);
+            }
         }
         .dropdown-toggle {
             .btn;
             width: 2em;
             margin-right: 0px;
+            &.disabled {
+                box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.45);
+            }
         }
         ul {
             li {
