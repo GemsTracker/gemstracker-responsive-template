@@ -1,5 +1,5 @@
 /* compliance */
-table.browser.compliance {
+table.compliance {
     tbody > tr > td {
         vertical-align: middle;
     }
@@ -8,18 +8,19 @@ table.browser.compliance {
         overflow: hidden;
         white-space: pre;
     }
-    
+
     td {
         span.fa-stack {
             font-size: .7em;
         }
-        a { color: inherit; }
-        &.answered { color: @brand-success !important;}
-        &.missed { color: @brand-danger !important;}
-        &.open { color: @brand-warning !important;}
-        &.unknown { color: @brand-info;}
-        &.waiting { color: darken(@brand-info, 20%) !important;}
-        &.empty { color: @brand-danger !important;}
+        &.answered a, &.answered span { color: @brand-success !important;}
+        &.missed a, &.missed span { color: @brand-danger !important;}
+        &.incomplete a, &.incomplete span { color: darken(@brand-danger, 10%) !important;}
+        &.open a, &.open span { color: @brand-warning !important;}
+        &.partial a, &.partial span { color: lighten(@brand-warning, 10%) !important;}
+        &.unknown a, &.unknown span { color: @brand-info;}
+        &.waiting a, &.waiting span { color: darken(@brand-info, 20%) !important;}
+        &.empty a, &.empty span { color: @brand-danger !important;}
     }
 
     td.newRound, th.newRound {
@@ -28,7 +29,7 @@ table.browser.compliance {
 
     td.round, th.round {
         text-align: center;
-        width: 2em; 
+        width: 2em;
         max-width: 2em;
         overflow: hidden;
         min-width: 2em;
