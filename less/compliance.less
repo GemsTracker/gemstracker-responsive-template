@@ -13,14 +13,14 @@ table.compliance {
         span.fa-stack {
             font-size: .7em;
         }
-        &.answered a, &.answered span { color: @brand-success !important;}
-        &.missed a, &.missed span { color: @brand-danger !important;}
-        &.incomplete a, &.incomplete span { color: darken(@brand-danger, 10%) !important;}
-        &.open a, &.open span { color: @brand-warning !important;}
-        &.partial a, &.partial span { color: lighten(@brand-warning, 10%) !important;}
-        &.unknown a, &.unknown span { color: @brand-info;}
-        &.waiting a, &.waiting span { color: darken(@brand-info, 20%) !important;}
-        &.empty a, &.empty span { color: @brand-danger !important;}
+        a .answered, span.answered { color: @brand-success !important;}
+        a .missed, span.missed { color: @brand-danger !important;}
+        a .incomplete, span.incomplete { color: darken(@brand-danger, 10%) !important;}
+        a .open, span.open { color: @brand-warning !important;}
+        a .partial, span.partial { color: lighten(@brand-warning, 10%) !important;}
+        a .unknown, span.unknown { color: @brand-info;}
+        a .waiting, span.waiting { color: darken(@brand-info, 20%) !important;}
+        a .empty, span.empty { color: @brand-danger !important;}
     }
 
     td.newRound, th.newRound {
