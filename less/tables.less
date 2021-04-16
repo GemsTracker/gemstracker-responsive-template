@@ -41,6 +41,41 @@ a.sortDescSelected {
 @table-bg-accent: @table-background-color-even;
 
 table {
+    &.answers {
+        .conditionQuestion {
+            color: #5c5c5c;
+            
+        }
+        .hideAlwaysQuestion {
+            color: grey;
+            font-size: smaller;
+            font-style: italic;
+        }
+        .group {
+            font-size: larger;
+            font-weight: bold;
+            text-align: center;
+        }
+        .icon {
+            text-align: center;
+        }
+        td.question i {
+            float: right;
+            margin-left: 0.5em;
+        }
+        td.question_sub {
+            padding-left: 1.5em; 
+            i {
+                display: none;
+            }
+        }
+        td.question_sub + td.icon {
+            i {
+                display: none;
+            }
+        }
+    }
+
     &.browser {
         .table;
         // Default bootstrap classes
@@ -86,7 +121,7 @@ table {
                 }
             }
         }
-
+        
         thead tr th, tfoot tr th {
             color: @table-head-text-color;
             background: @table-head-background-color;
