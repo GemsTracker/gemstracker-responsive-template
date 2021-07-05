@@ -89,6 +89,11 @@
       &:hover {
         border-color: @nav-tabs-link-hover-border-color @nav-tabs-link-hover-border-color @nav-tabs-border-color;
       }
+      
+      &.disabled {
+        font-style: italic;
+        color: @nav-tabs-disabled-link-hover-color;
+      }
     }
 
     // Active state, and its :hover to override normal :hover
