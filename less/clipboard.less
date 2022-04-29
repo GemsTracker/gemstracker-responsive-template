@@ -1,20 +1,32 @@
 
-.copier-to-clipboard {
+img.copier-to-clipboard {
   background-color: white;
   border: black 1px solid;
   border-radius: 2px;
-  box-shadow: 3px 3px rgba(127,127,127,0.75);
-  margin-top: -2px;
-  margin-right: 8px;
-  position: absolute;
+  box-shadow: 3px 3px rgba(127, 127, 127, 0.75);
   padding: 2px;
-  right: 23px;
-  z-index: 100;
+
+  &.copier-after {
+    display: inline-block;
+    margin-left: 0.5em;
+  }
+  &.copier-before {
+    margin-top: -2px;
+    margin-right: 8px;
+    position: absolute;
+    right: 23px;
+    z-index: 100;
+  }
 }
 
-.copier-to-clipboard:active {
+img.copier-to-clipboard:active {
   box-shadow: 1px 1px rgba(127,127,127,0.75);
   box-shadow: inset;
   margin-top: 0px;
   margin-right: 6px;
 }
+
+input.token_copy.copy-to-clipboard-after {
+  display: inline-block;
+}
+
